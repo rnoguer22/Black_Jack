@@ -24,9 +24,9 @@ for key, value in cartas.items():
 print ("Comienza el juego 😀")
 
 lista_cartas = list(cartas)
-mis_cartas = sample(lista_cartas, 2)
-puntos = cartas(mis_cartas)
+carta = choice (lista_cartas)
 
-for cartas in mis_cartas:
-    print ("Estas son tus cartas:  {}  {}  --- que suman {} puntos".format(mis_cartas[0],
+mis_cartas = sample(lista_cartas, 2)
+puntos = sum(cartas[carta] for carta in mis_cartas)
+print ("Estas son tus cartas:  {}  {}  --- que suman {} puntos".format(mis_cartas[0],
                                                                             mis_cartas[1],puntos))
