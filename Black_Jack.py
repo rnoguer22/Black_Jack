@@ -29,4 +29,8 @@ carta = choice (lista_cartas)
 mis_cartas = sample(lista_cartas, 2)
 puntos = sum(cartas[carta] for carta in mis_cartas)
 print ("Estas son tus cartas:  {}  {}  --- que suman {} puntos".format(mis_cartas[0],
-                                                                            mis_cartas[1],puntos))
+                                                         mis_cartas[1],puntos))
+cartas_banca = sample(lista_cartas, 2)
+puntos_banca = sum(cartas[carta] for carta in cartas_banca)
+print ("La banca tiene estas cartas  {}  {}  --- que suman {} puntazos".format(cartas_banca[0],
+                                                    cartas_banca[1], puntos_banca))
