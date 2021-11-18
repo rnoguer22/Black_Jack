@@ -18,3 +18,5 @@ print ("Estas son las cartas: {}".format(" - ".join(cartas.keys())))
 
 for key, value in cartas.items():
     print ("{} vale {} puntos".format(key, value))
+
+print ("Comienza el juego 😀")
