@@ -43,13 +43,21 @@ def cartas_de_la_banca():
 while True:
     x = cartas_jugador()
     y = cartas_de_la_banca()
-    if x < y:
-        print ("La banca ha estado mas cerca de los 21 puntos, ya que tiene {} puntos y tu solo tienes {}"
-                                                                                .format(y, x))
-        break
-    elif x > y:
-        print ("¡Has ganado la apuesta! ya que tienes {} puntos mas que la banca"
-            .format(x-y))
-        break
+    if x and y <= 21:
+        if x < y:
+            print ("La banca ha estado mas cerca de los 21 puntos, ya que tiene {} puntos y tu solo tienes {}"
+                    .format(y, x))
+            print ("Has pedido la ronda 🥺")
+            break
+        elif x > y:
+            print ("¡Has ganado la apuesta! ya que tienes {} puntos mas que la banca 👊👊👊"
+                    .format(x-y))
+            break
+        else:
+            print ("La banca y tu teneis los mismos puntos, por lo que hay que repetir la ronda 😞")
     else:
-        print ("La banca y tu teneis los mismos puntos, por lo que hay que repetir la ronda 🥺")
+        if x == 22:
+            print ("Cheee que te has pasado de los 21 puntos, has perdido la ronda")
+        elif y == 22:
+            print ("Vaya, la banca ha superado los 21 puntos, por lo que automaticamente ganas la ronda")
+    break
