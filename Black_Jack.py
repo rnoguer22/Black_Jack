@@ -36,7 +36,7 @@ def cartas_jugador():
 def cartas_de_la_banca():
     cartas_banca = sample(lista_cartas, 2)
     puntos_banca = sum(cartas[carta] for carta in cartas_banca)
-    print ("La banca tiene estas cartas  {}  {}  --- que suman {} puntazos".format(cartas_banca[0],
+    print ("La banca tiene estas cartas:  {}  {}  --- que suman {} puntazos".format(cartas_banca[0],
                                                     cartas_banca[1], puntos_banca))
     return puntos_banca
 
@@ -45,7 +45,7 @@ while True:
     y = cartas_de_la_banca()
     if x < y:
         print ("La banca ha estado mas cerca de los 21 puntos, ya que tiene {} puntos y tu solo tienes {}"
-                                                                                .format(x, y))
+                                                                                .format(y, x))
         break
     elif x > y:
         print ("¡Has ganado la apuesta! ya que tienes {} puntos mas que la banca"
