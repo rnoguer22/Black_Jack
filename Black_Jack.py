@@ -1,3 +1,5 @@
+from random import choice, sample
+
 cartas = {
     chr(0x1f0a1): 11,
     chr(0x1f0a2): 2,
@@ -20,3 +22,11 @@ for key, value in cartas.items():
     print ("{} vale {} puntos".format(key, value))
 
 print ("Comienza el juego 😀")
+
+lista_cartas = list(cartas)
+mis_cartas = sample(lista_cartas, 2)
+puntos = cartas(mis_cartas)
+
+for cartas in mis_cartas:
+    print ("Estas son tus cartas:  {}  {}  --- que suman {} puntos".format(mis_cartas[0],
+                                                                            mis_cartas[1],puntos))
