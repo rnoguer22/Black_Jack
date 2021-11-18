@@ -31,11 +31,25 @@ def cartas_jugador():
     puntos = sum(cartas[carta] for carta in mis_cartas)
     print ("Estas son tus cartas:  {}  {}  --- que suman {} puntos".format(mis_cartas[0],
                                                          mis_cartas[1],puntos))
+    return puntos
+
 def cartas_de_la_banca():
     cartas_banca = sample(lista_cartas, 2)
     puntos_banca = sum(cartas[carta] for carta in cartas_banca)
     print ("La banca tiene estas cartas  {}  {}  --- que suman {} puntazos".format(cartas_banca[0],
                                                     cartas_banca[1], puntos_banca))
+    return puntos_banca
 
-cartas_jugador()
-cartas_de_la_banca()
+while True:
+    x = cartas_jugador()
+    y = cartas_de_la_banca()
+    if x < y:
+        print ("La banca ha estado mas cerca de los 21 puntos, ya que tiene {} puntos y tu solo tienes {}"
+                                                                                .format(x, y))
+        break
+    elif x > y:
+        print ("¡Has ganado la apuesta! ya que tienes {} puntos mas que la banca"
+            .format(x-y))
+        break
+    else:
+        print ("La banca y tu teneis los mismos puntos, por lo que hay que repetir la ronda 🥺")
