@@ -58,6 +58,7 @@ while True:
     else:
         if x == 22:
             print ("Cheee que te has pasado de los 21 puntos, has perdido la ronda")
+            break
         elif y == 22:
             print ("Vaya, la banca ha superado los 21 puntos, por lo que automaticamente ganas la ronda")
-    break
+            break
