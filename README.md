@@ -2,9 +2,11 @@
 
 Este es el link de mi repositorio del Black Jack: [GitHub](https://github.com/rnoguer22/Black_Jack.git)
 
-Hemos resuelto la tarea del juego del Black Jack
+Hemos resuelto la tarea del juego del Black Jack, y hemos añadido un bucle while con una serie de condicionales para hacer que el juego sea un poquito mas parecido a lo que es el Black Jack en la vida rea
 
 Este es el diagrama de flujo que representa el codigo del juego:
+
+![Diagrama de flujo - Black Jack drawio (1)](https://user-images.githubusercontent.com/91721762/142731864-f8a8321f-f5ae-45f5-89b7-fac135ccba1c.png)
 
 
 
