@@ -18,7 +18,7 @@ cartas = {
 
 print ("Estas son las cartas: {}".format(" - ".join(cartas.keys())))
 
-for key, value in cartas.items():
+for key, value in sorted(cartas.items()):
     print ("{} vale {} puntos".format(key, value))
 
 print ("Comienza el juego 😀")
@@ -43,22 +43,31 @@ def cartas_de_la_banca():
 while True:
     x = cartas_jugador()
     y = cartas_de_la_banca()
-    if x and y <= 21:
+    if x <= 21 and y <= 21:
         if x < y:
-            print ("La banca ha estado mas cerca de los 21 puntos, ya que tiene {} puntos y tu solo tienes {}"
+            if x < 21 and y == 21:
+                print ("La banca ha hecho Black Jack, no hay na que hacer, has perdido la ronda")
+            else:
+                print ("La banca ha estado mas cerca de los 21 puntos, ya que tiene {} puntos y tu solo tienes {}"
                     .format(y, x))
-            print ("Has pedido la ronda 🥺")
+                print ("Has pedido la ronda 🥺")
             break
         elif x > y:
-            print ("¡Has ganado la apuesta! ya que tienes {} puntos mas que la banca 👊👊👊"
+            if x == 21 and y < 21:
+                print ("Has hecho Black Jack!!! Vaya maquina has ganado!!! ")
+            else:
+                print ("¡Has ganado la apuesta! ya que tienes {} puntos mas que la banca 👊👊👊"
                     .format(x-y))
             break
         else:
             print ("La banca y tu teneis los mismos puntos, por lo que hay que repetir la ronda 😞")
     else:
-        if x == 22:
+        if x == 22 and y < 22:
             print ("Cheee que te has pasado de los 21 puntos, has perdido la ronda")
             break
-        elif y == 22:
+        elif y == 22 and x < 22:
             print ("Vaya, la banca ha superado los 21 puntos, por lo que automaticamente ganas la ronda")
             break
+        else:
+            print ("Ambos os habeis pasado de 21 puntos y ademas habeis empatado, vaya paquetes, "
+                "repetimos la ronda anda")
