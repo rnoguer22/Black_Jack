@@ -11,7 +11,9 @@ Este es el diagrama de flujo que representa el codigo del juego:
 
 
 El codigo del Black Jack es el siguiente:
-```from random import choice, sample   # Importamos random para utilizarlo mas tarde
+
+```
+from random import choice, sample   # Importamos random para utilizarlo mas tarde
 
 cartas = {   # Definimos un diccionario con las cartas y los puntos que vale cada carta
     chr(0x1f0a1): 11,
@@ -85,4 +87,5 @@ while True:
         else:
             print ("Ambos os habeis pasado de 21 puntos y ademas habeis empatado, vaya paquetes, "
                 "repetimos la ronda anda")
-# Con esto acabaria el codigo del juego```
+# Con esto acabaria el codigo del juego
+```
