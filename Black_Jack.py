@@ -1,6 +1,6 @@
-from random import choice, sample
+from random import choice, sample   # Importamos random para utilizarlo mas tarde
 
-cartas = {
+cartas = {   # Definimos un diccionario con las cartas y los puntos que vale cada carta
     chr(0x1f0a1): 11,
     chr(0x1f0a2): 2,
     chr(0x1f0a3): 3,
@@ -16,34 +16,35 @@ cartas = {
     chr(0x1f0ae): 10,
 }
 
-print ("Estas son las cartas: {}".format(" - ".join(cartas.keys())))
+# Enseñamos las cartas con las que vamos a jugar
+print ("Estas son las cartas: {}".format(" - ".join(cartas.keys())))   
 
-for key, value in sorted(cartas.items()):
+for key, value in sorted(cartas.items()):   # Mostramos al usuario cuantos puntos vale cada carta
     print ("{} vale {} puntos".format(key, value))
 
-print ("Comienza el juego 😀")
+print ("Comienza el juego 😀")   # Empieza el juegazo
 
-lista_cartas = list(cartas)
-carta = choice (lista_cartas)
+lista_cartas = list(cartas)   # Creamos una lista para posteriormente elegir las cartas
+carta = choice (lista_cartas)   # Elegimos una carta de la lista
 
-def cartas_jugador():
-    mis_cartas = sample(lista_cartas, 2)
-    puntos = sum(cartas[carta] for carta in mis_cartas)
+def cartas_jugador():   # Creamos una funcion que va a elegir las cartas del usuario y los puntos que valen
+    mis_cartas = sample(lista_cartas, 2)   # Mostramos las dos cartas elegidas aleatoriamente para el usuario
+    puntos = sum(cartas[carta] for carta in mis_cartas)   # Sumamos los puntos de las dos cartas
     print ("Estas son tus cartas:  {}  {}  --- que suman {} puntos".format(mis_cartas[0],
                                                          mis_cartas[1],puntos))
-    return puntos
+    return puntos   # Nos devuelve los puntos de las cartas, para usarlo posteriormente en un bucle while
 
-def cartas_de_la_banca():
-    cartas_banca = sample(lista_cartas, 2)
-    puntos_banca = sum(cartas[carta] for carta in cartas_banca)
+def cartas_de_la_banca():   # Creamos otra funcion que va a elegir las cartas de la banca
+    cartas_banca = sample(lista_cartas, 2)   # Muestra las dos cartas de la banca
+    puntos_banca = sum(cartas[carta] for carta in cartas_banca)   # Hallamos la suma de los puntos de ambas cartas
     print ("La banca tiene estas cartas:  {}  {}  --- que suman {} puntazos".format(cartas_banca[0],
                                                     cartas_banca[1], puntos_banca))
-    return puntos_banca
+    return puntos_banca   # Devuelve los puntos de las cartas de la banca, para compararlos con los puntos de las cartas del jugador
 
 while True:
     x = cartas_jugador()
     y = cartas_de_la_banca()
-    if x <= 21 and y <= 21:
+    if x <= 21 and y <= 21:   # Comenzamos a comparar los puntos del jugador y de la banca
         if x < y:
             if x < 21 and y == 21:
                 print ("La banca ha hecho Black Jack, no hay na que hacer, has perdido la ronda")
@@ -71,3 +72,4 @@ while True:
         else:
             print ("Ambos os habeis pasado de 21 puntos y ademas habeis empatado, vaya paquetes, "
                 "repetimos la ronda anda")
+# Con esto acabaria el codigo del juego
