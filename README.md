@@ -2,7 +2,7 @@
 
 Este es el link de mi repositorio del Black Jack: [GitHub](https://github.com/rnoguer22/Black_Jack.git)
 
-Hemos resuelto la tarea del juego del Black Jack, y hemos añadido un bucle while con una serie de condicionales para hacer que el juego sea un poquito mas parecido a lo que es el Black Jack en la vida real
+Hemos resuelto la tarea del juego del Black Jack, con la baraja entera (es decir, incluyendo los 4 palos), y hemos añadido un bucle while con una serie de condicionales para hacer que el juego sea un poquito mas parecido a lo que es el Black Jack en la vida real
 
 Este es el diagrama de flujo que representa el codigo del juego:
 
@@ -29,6 +29,48 @@ cartas = {   # Definimos un diccionario con las cartas y los puntos que vale cad
     chr(0x1f0ab): 10,
     chr(0x1f0ad): 10,
     chr(0x1f0ae): 10,
+    
+    chr(0x1f0b1): 11,
+    chr(0x1f0b2): 2,
+    chr(0x1f0b3): 3,
+    chr(0x1f0b4): 4,
+    chr(0x1f0b5): 5,
+    chr(0x1f0b6): 6,
+    chr(0x1f0b7): 7,
+    chr(0x1f0b8): 8,
+    chr(0x1f0b9): 9,
+    chr(0x1f0ba): 10,
+    chr(0x1f0bb): 10,
+    chr(0x1f0bd): 10,
+    chr(0x1f0be): 10,
+    
+    chr(0x1f0c1): 11,
+    chr(0x1f0c2): 2,
+    chr(0x1f0c3): 3,
+    chr(0x1f0c4): 4,
+    chr(0x1f0c5): 5,
+    chr(0x1f0c6): 6,
+    chr(0x1f0c7): 7,
+    chr(0x1f0c8): 8,
+    chr(0x1f0c9): 9,
+    chr(0x1f0ca): 10,
+    chr(0x1f0cb): 10,
+    chr(0x1f0cd): 10,
+    chr(0x1f0ce): 10,
+    
+    chr(0x1f0d1): 11,
+    chr(0x1f0d2): 2,
+    chr(0x1f0d3): 3,
+    chr(0x1f0d4): 4,
+    chr(0x1f0d5): 5,
+    chr(0x1f0d6): 6,
+    chr(0x1f0d7): 7,
+    chr(0x1f0d8): 8,
+    chr(0x1f0d9): 9,
+    chr(0x1f0da): 10,
+    chr(0x1f0db): 10,
+    chr(0x1f0dd): 10,
+    chr(0x1f0de): 10,
 }
 
 # Enseñamos las cartas con las que vamos a jugar
