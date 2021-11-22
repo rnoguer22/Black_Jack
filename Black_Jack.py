@@ -14,6 +14,7 @@ cartas = {   # Definimos un diccionario con las cartas y los puntos que vale cad
     chr(0x1f0ab): 10,
     chr(0x1f0ad): 10,
     chr(0x1f0ae): 10,
+    
     chr(0x1f0b1): 11,
     chr(0x1f0b2): 2,
     chr(0x1f0b3): 3,
@@ -27,6 +28,7 @@ cartas = {   # Definimos un diccionario con las cartas y los puntos que vale cad
     chr(0x1f0bb): 10,
     chr(0x1f0bd): 10,
     chr(0x1f0be): 10,
+    
     chr(0x1f0c1): 11,
     chr(0x1f0c2): 2,
     chr(0x1f0c3): 3,
@@ -40,6 +42,7 @@ cartas = {   # Definimos un diccionario con las cartas y los puntos que vale cad
     chr(0x1f0cb): 10,
     chr(0x1f0cd): 10,
     chr(0x1f0ce): 10,
+    
     chr(0x1f0d1): 11,
     chr(0x1f0d2): 2,
     chr(0x1f0d3): 3,
