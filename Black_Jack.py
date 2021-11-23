@@ -69,6 +69,13 @@ print ("Comienza el juego 😀")   # Empieza el juegazo
 lista_cartas = list(cartas)   # Creamos una lista para posteriormente elegir las cartas
 carta = choice (lista_cartas)   # Elegimos una carta de la lista
 
+def elegir_jugadores():
+    nombres = []
+    jugadores = int(input('¿Cuantos jugadores van a jugar?: '))
+    for i in range(jugadores):
+        nombre = str(input('Nombre del jugador ' + str(i + 1)))
+        nombres.append(nombre)
+
 def cartas_jugador():   # Creamos una funcion que va a elegir las cartas del usuario y los puntos que valen
     mis_cartas = sample(lista_cartas, 2)   # Mostramos las dos cartas elegidas aleatoriamente para el usuario
     puntos = sum(cartas[carta] for carta in mis_cartas)   # Sumamos los puntos de las dos cartas
@@ -83,9 +90,17 @@ def cartas_de_la_banca():   # Creamos otra funcion que va a elegir las cartas de
                                                     cartas_banca[1], puntos_banca))
     return puntos_banca   # Devuelve los puntos de las cartas de la banca, para compararlos con los puntos de las cartas del jugador
 
+def numero_jugadores ():
+    num_jugadores = int (input ("Cuantos jugadores van a jugar al Black Jack? "))
+    for i in range (num_jugadores):
+        jugadores = [jugadores(i)]
+        jugadores.append(jugadores)
+    return num_jugadores
+
 while True:
     x = cartas_jugador()
     y = cartas_de_la_banca()
+    jugadores = numero_jugadores
     if x <= 21 and y <= 21:   # Comenzamos a comparar los puntos del jugador y de la banca
         if x < y:
             if x < 21 and y == 21:
